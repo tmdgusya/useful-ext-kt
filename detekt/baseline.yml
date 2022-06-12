@@ -1,0 +1,11 @@
+complexity:
+  TooManyFunctions:
+    thresholdInFiles: 15 # one class only has fifteen function
+
+build:
+  maxIssue: 1
+  weights:
+    LongParameterList: 1
+
+console-reports:
+  active: true
