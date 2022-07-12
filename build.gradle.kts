@@ -35,4 +35,5 @@ tasks.withType<DetektCreateBaselineTask>().configureEach {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
+    implementation("io.kotest:kotest-runner-junit5-jvm:4.6.0")
 }
