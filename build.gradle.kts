@@ -34,6 +34,10 @@ tasks.withType<DetektCreateBaselineTask>().configureEach {
 }
 
 dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
-    implementation("io.kotest:kotest-runner-junit5-jvm:4.6.0")
+    implementation("io.kotest:kotest-runner-junit5-jvm:5.3.1")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0")
+    testImplementation("io.kotest:kotest-assertions-core:5.3.1")
+    testImplementation("io.kotest:kotest-property:5.3.1")
 }
