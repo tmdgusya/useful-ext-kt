@@ -1,4 +1,7 @@
 import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.withContext
 import kotlin.coroutines.CoroutineContext
 
@@ -36,4 +39,13 @@ suspend fun <A, B> pairAwaitAll(
         defer1.await(),
         defer2.await(),
     )
+}
+
+/**
+ * Parallel Map in Kotlin Coroutines
+ *
+ * @see https://jivimberg.io/blog/2018/05/04/parallel-map-in-kotlin/
+ */
+suspend fun <A, B> Iterable<A>.map(func: suspend (A) -> B): List<B> = coroutineScope {
+    map { async { func(it) } }.awaitAll()
 }
