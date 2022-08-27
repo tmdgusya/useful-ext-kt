@@ -14,7 +14,7 @@ detekt {
     buildUponDefaultConfig = true
     allRules = false
     config = files("$projectDir/detekt/detekt.yml")
-    baseline = file("$projectDir/detekt/baseline.yml")
+    baseline = file("$projectDir/detekt/baseline.xml")
 }
 
 tasks.withType<Detekt>().configureEach {

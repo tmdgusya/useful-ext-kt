@@ -1,0 +1,11 @@
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
+  TooGenericExceptionThrown:
+    active: false
+  SwallowedException:
+    active: false
+
+style:
+  FunctionOnlyReturningConstant:
+    active: false
