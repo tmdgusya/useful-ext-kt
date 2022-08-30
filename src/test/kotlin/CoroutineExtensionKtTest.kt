@@ -6,7 +6,7 @@ import org.junit.jupiter.api.assertAll
 
 class CoroutineExtensionKtTest : FunSpec({
 
-    test("exectued tripleAwaitAll") {
+    test("executed tripleAwaitAll") {
         val (
             intValue,
             StringValue,
@@ -25,7 +25,7 @@ class CoroutineExtensionKtTest : FunSpec({
         )
     }
 
-    test("exectued pairAwaitAll") {
+    test("executed pairAwaitAll") {
         val (
             intValue,
             StringValue,

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.assertThrows
 
 class DeferredExtensionKtTest : FunSpec() {
     init {
-        test("exception progation").config(testCoroutineDispatcher = true) {
+        test("exception propagation").config(testCoroutineDispatcher = true) {
             val job = async {
                 throwExceptionFunc()
             }
